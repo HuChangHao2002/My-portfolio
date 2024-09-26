@@ -5,6 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
     selector: 'app-root',
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
         ProjectsComponent, 
         ContactComponent , 
         HeaderComponent,
-        RouterModule
+        RouterModule,
+        FooterComponent
     ],
     standalone: true,
 })
