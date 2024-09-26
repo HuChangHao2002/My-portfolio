@@ -4,7 +4,7 @@
     <h1 class="text-2xl text-gray-800">Welcome to My Portfolio</h1>
     <p class="text-4xl font-bold text-gray-600 mt-4">Hi, I'm Hu Chang Hao 👋🏻</p>
     <p class="text-gray-700 mt-4 px-4 md:px-0">
-      I am a passionate web developer specializing in building interactive and responsive web applications. 
+      I am a passionate software engineer specializing in building interactive and responsive web applications. 
       I enjoy creating seamless user experiences and leveraging modern technologies to bring ideas to life.
     </p>
     <a href="#projects" class="mt-8 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">View My Projects</a>
@@ -15,23 +15,24 @@
   <h2 class="text-center text-3xl font-bold text-gray-800">My Projects</h2>
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
     <div class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition">
-      <img src="project1-image-url.jpg" alt="Project 1" class="h-48 w-full object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-semibold">Project Title 1</h3>
-      <p class="text-gray-700">A brief description of the project goes here. Explain what you built and the technologies used.</p>
-      <a href="#" class="text-blue-500 hover:underline">View Project</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="Project 1" class="h-48 w-full object-contain rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">MFA E-commerce website</h3>
+      <p class="text-gray-700">Developed a secure e-commerce platform using PHP, Laravel, HTML, and CSS, with integrated multi-factor authentication for enhanced security, achieving a project grade of 4.0</p>
+      <a routerLink="/projects" class="text-blue-500 hover:underline">View Project</a>
     </div>
     <div class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition">
-      <img src="project2-image-url.jpg" alt="Project 2" class="h-48 w-full object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-semibold">Project Title 2</h3>
-      <p class="text-gray-700">A brief description of the project goes here. Explain what you built and the technologies used.</p>
-      <a href="#" class="text-blue-500 hover:underline">View Project</a>
+      <img src="https://media.licdn.com/dms/image/D5612AQEHGZUx2evvxg/article-cover_image-shrink_600_2000/0/1688275415052?e=2147483647&v=beta&t=MiibYoaOd8k3EYKJGp_zBmSoyV_tklwOItiTYILUXKI" alt="Project 2" class="h-48 w-full object-contain rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">Inventory Management System</h3>
+      <p class="text-gray-700">Built with C programming.</p>
+      <a routerLink="/projects" class="text-blue-500 hover:underline">View Project</a>
     </div>
     <div class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition">
-      <img src="project3-image-url.jpg" alt="Project 3" class="h-48 w-full object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-semibold">Project Title 3</h3>
-      <p class="text-gray-700">A brief description of the project goes here. Explain what you built and the technologies used.</p>
-      <a href="#" class="text-blue-500 hover:underline">View Project</a>
+      <img src="https://www.practicallynetworked.com/wp-content/uploads/2021/09/rouge-access-points-wifi.jpg" alt="Project 3" class="h-48 w-full object-contain rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">Wireless and Mobile Security Project</h3>
+      <p class="text-gray-700">Executed rogue access point attack using Linux OS.</p>
+      <a routerLink="/projects" class="text-blue-500 hover:underline">View Project</a>
     </div>
+    
     <!-- Add more project cards as needed -->
   </div>
 </section>
@@ -57,4 +58,9 @@
     </div>
     <!-- Add more skills as needed -->
   </div>
+  <!-- Button to go to About Me page -->
+  <div class="text-center mt-8">
+    <a routerLink="/about" routerLinkActive="text-blue-500" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Learn More About Me</a>
+  </div>
 </section>
+
