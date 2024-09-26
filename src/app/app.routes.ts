@@ -11,3 +11,7 @@ export const routes: Routes = [
     { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: ContactComponent },
 ];
+
+export const AppRoutingModule = RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top' 
+});
