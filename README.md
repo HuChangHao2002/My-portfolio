@@ -1,7 +1,3 @@
-Here's a revised and customized README for your Angular portfolio project:
-
----
-
 # MyPortfolio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3 and showcases my portfolio, including my projects, skills, and professional experiences.
@@ -40,7 +36,3 @@ This project uses Firebase as the backend for data storage and authentication. E
 
 ### Further Help
 For additional help with Angular CLI commands, run `ng help` or visit the official [Angular CLI Documentation](https://angular.dev/tools/cli).
-
----
-
-This version is tailored to your project setup, especially since you're working with Firebase for backend integration.
