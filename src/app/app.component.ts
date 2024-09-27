@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { BackToTopComponent } from './back-to-top/back-to-top.component';
 
 @Component({
     selector: 'app-root',
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
         ContactComponent , 
         HeaderComponent,
         RouterModule,
-        FooterComponent
+        FooterComponent,
+        BackToTopComponent
     ],
     standalone: true,
 })
