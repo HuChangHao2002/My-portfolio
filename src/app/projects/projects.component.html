@@ -1,42 +1,44 @@
-<section id="projects" class="py-16 bg-white" >
+<section id="projects" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-center text-4xl font-bold text-gray-800 mb-8">My Projects</h2>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
-      <!-- Project Card 1 -->
-      <div class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="Project 1" class="h-48 w-full object-contain rounded-lg mb-4">
-        <h3 class="text-xl font-semibold">MFA E-commerce Website</h3>
-        <p class="text-gray-700 mb-4">Developed a secure e-commerce platform using PHP, Laravel, HTML, and CSS, with integrated multi-factor authentication for enhanced security, achieving a project grade of 4.0.</p>
-        <div class="mt-2 mb-4">
-          <span class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">PHP</span>
-          <span class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Laravel</span>
-          <span class="bg-gray-400 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
-        </div>
-        <a routerLink="/projects" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">View Project</a>
+
+    <!-- Filter and Sort Section -->
+    <div class="mb-6 flex justify-between items-center">
+      <div class="flex items-center">
+        <label for="technologies" class="mr-2 text-lg font-medium">Filter by Technology:</label>
+        <select id="technologies" (change)="onFilterChange($event)" class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-500">
+          <option value="">All</option>
+          <option value="PHP">PHP</option>
+          <option value="Laravel">Laravel</option>
+          <option value="HTML">HTML</option>
+          <option value="C">C</option>
+          <option value="Linux">Linux</option>
+          <option value="ASP.NET Core">ASP.NET Core</option>
+          <option value="Python">Python</option>
+          <option value="Microsoft SQL">Microsoft SQL</option>
+        </select>
       </div>
-  
-      <!-- Project Card 2 -->
-      <div class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-        <img src="https://media.licdn.com/dms/image/D5612AQEHGZUx2evvxg/article-cover_image-shrink_600_2000/0/1688275415052?e=2147483647&v=beta&t=MiibYoaOd8k3EYKJGp_zBmSoyV_tklwOItiTYILUXKI" alt="Project 2" class="h-48 w-full object-contain rounded-lg mb-4">
-        <h3 class="text-xl font-semibold">Inventory Management System</h3>
-        <p class="text-gray-700 mb-4">Built with C programming, allowing efficient tracking and management of inventory.</p>
-        <div class="mt-2 mb-4">
-          <span class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded-full">C</span>
-        </div>
-        <a routerLink="/projects" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">View Project</a>
+
+      <div class="flex items-center">
+        <label for="sortOrder" class="mr-2 text-lg font-medium">Sort by Completion Date:</label>
+        <select id="sortOrder" (change)="onSortChange($event)" class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-500">
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
       </div>
-  
-      <!-- Project Card 3 -->
-      <div class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-        <img src="https://www.practicallynetworked.com/wp-content/uploads/2021/09/rouge-access-points-wifi.jpg" alt="Project 3" class="h-48 w-full object-contain rounded-lg mb-4">
-        <h3 class="text-xl font-semibold">Wireless and Mobile Security Project</h3>
-        <p class="text-gray-700 mb-4">Executed rogue access point attack using Linux OS to evaluate network vulnerabilities.</p>
-        <div class="mt-2 mb-4">
-          <span class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Linux</span>
-        </div>
-        <a routerLink="/projects" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">View Project</a>
-      </div>
-      
-      <!-- Add more project cards as needed -->
     </div>
-  </section>
-  
+
+    <!-- Project Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let project of filteredProjects" class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+        <img [src]="project.imageUrl" alt="{{ project.title }}" class="h-48 w-full object-contain rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">{{ project.title }}</h3>
+        <p class="text-gray-700 mb-4">{{ project.description }}</p>
+        <div class="mt-2 mb-4 flex flex-wrap">
+          <span *ngFor="let tech of project.technologies" class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">{{ tech }}</span>
+        </div>
+        <a routerLink="/projects" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
