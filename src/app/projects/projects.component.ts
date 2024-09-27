@@ -62,14 +62,12 @@ export class ProjectsComponent {
       technologies: ['Microsoft SQL'],
       completionDate: new Date(2023, 5, 10) 
     },
-    // Add more projects as needed
   ];
 
   filteredProjects: Project[] = [...this.projects]; 
   selectedTechnologies: string[] = []; 
   sortOrder: string = 'asc'; 
 
-  // Method to filter projects
   filterProjects() {
     this.filteredProjects = this.projects.filter(project => {
       return this.selectedTechnologies.length === 0 || 
@@ -77,7 +75,6 @@ export class ProjectsComponent {
     });
   }
 
-  // Method to sort projects
   sortProjects() {
     this.filteredProjects.sort((a, b) => {
       return this.sortOrder === 'asc'
@@ -86,25 +83,23 @@ export class ProjectsComponent {
     });
   }
 
-  // Method to handle filter change
   onFilterChange(event: Event) {
-    const selectElement = event.target as HTMLSelectElement; // Cast event.target to HTMLSelectElement
+    const selectElement = event.target as HTMLSelectElement; 
     const selectedValue = selectElement.value;
 
     if (selectedValue) {
-      this.selectedTechnologies = [selectedValue]; // Update selected technologies
+      this.selectedTechnologies = [selectedValue]; 
     } else {
-      this.selectedTechnologies = []; // Reset if "All" is selected
+      this.selectedTechnologies = []; 
     }
 
     this.filterProjects();
     this.sortProjects();
   }
-
-  // Method to handle sort change
+  
   onSortChange(event: Event) {
-    const selectElement = event.target as HTMLSelectElement; // Cast event.target to HTMLSelectElement
-    this.sortOrder = selectElement.value; // Get the new sort order
+    const selectElement = event.target as HTMLSelectElement; 
+    this.sortOrder = selectElement.value; 
 
     this.sortProjects();
   }

@@ -1,9 +1,8 @@
-// blog.service.ts
 import { Injectable } from '@angular/core';
 import { BlogPost } from './models/blog-post.model';
 
 @Injectable({
-  providedIn: 'root', // This makes the service available throughout the application
+  providedIn: 'root', 
 })
 export class BlogService {
   blogPosts: BlogPost[] = [

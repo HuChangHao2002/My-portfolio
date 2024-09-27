@@ -2,7 +2,6 @@
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-center text-4xl font-bold text-gray-800 mb-8">My Projects</h2>
 
-    <!-- Filter and Sort Section -->
     <div class="mb-6 flex justify-between items-center">
       <div class="flex items-center">
         <label for="technologies" class="mr-2 text-lg font-medium">Filter by Technology:</label>
@@ -27,8 +26,7 @@
         </select>
       </div>
     </div>
-
-    <!-- Project Cards -->
+    
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div *ngFor="let project of filteredProjects" class="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
         <img [src]="project.imageUrl" alt="{{ project.title }}" class="h-48 w-full object-contain rounded-lg mb-4">
