@@ -1,16 +1,25 @@
 <section class="py-16 bg-white">
   <div class="max-w-4xl mx-auto px-6">
     <h1 class="text-5xl font-bold text-gray-900 mb-6">{{ post.title }}</h1>
+
+    <!-- Centered Image -->
+    <img 
+      [src]="post.imageUrl" 
+      alt="{{ post.title }}" 
+      class="block mx-auto max-w-md h-auto mb-6 rounded-lg shadow-md object-cover">
+
     <div class="prose prose-lg mb-10">
-      <p>{{ post.content }}</p>
+      <p class="text-gray-700 text-lg leading-relaxed text-justify">
+        {{ post.content }}
+      </p>
     </div>
 
-    <div class="h-[300px]"></div>
+    <div class="h-[50px]"></div>
 
     <div class="flex justify-center">
       <a 
         routerLink="/blog" 
-        class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+        class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow transition duration-300">
         Back to Blog
       </a>
     </div>
