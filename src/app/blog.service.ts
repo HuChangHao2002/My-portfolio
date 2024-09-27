@@ -21,7 +21,9 @@ export class BlogService {
         By the end of this post, you will understand how to leverage Angular's features to improve your development workflow and build robust applications.
       `,
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
+      source: 'Image source: Wikimedia Commons',
     },
+    
     {
       id: 2,
       title: 'Getting Started with TypeScript',
@@ -36,6 +38,7 @@ export class BlogService {
         By the end of this post, you will have a solid understanding of how to write TypeScript code and integrate it into your existing JavaScript projects.
       `,
       imageUrl: 'https://miro.medium.com/v2/resize:fit:1200/1*VTW6T-7KkQHPjf4mtfQ0Zg.png',
+      source: 'Image source: Medium',
     },
     {
       id: 3,
@@ -51,6 +54,7 @@ export class BlogService {
         By the end of this post, you'll be equipped with the knowledge to implement responsive designs that enhance user experience and engagement.
       `,
       imageUrl: 'https://www.urteqi.com/assets/images/blog/3rdblog.jpg',
+      source: 'Image source: Urteqi',
     },
     
     {
@@ -70,7 +74,8 @@ export class BlogService {
   
       Conclusion:  
       The Honda Civic continues to impress with its blend of performance, efficiency, and style. As it looks to the future, it remains a top choice for those seeking a reliable and fun vehicle.`,
-      imageUrl: "https://evault.honda.com.my/pixelvault/2022-07/553b2b3863d228aad0a89ec272a0d549fd0d43fe43419.png"
+      imageUrl: "https://evault.honda.com.my/pixelvault/2022-07/553b2b3863d228aad0a89ec272a0d549fd0d43fe43419.png",
+      source: 'Image source: Honda Malaysia',
     },
   ];
 

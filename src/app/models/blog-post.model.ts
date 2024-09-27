@@ -5,4 +5,5 @@ export interface BlogPost {
   content: string;
   excerpt: string; 
   imageUrl: string; 
+  source:string;
 }
