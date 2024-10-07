@@ -1,7 +1,3 @@
-# MyPortfolio
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3 and showcases my portfolio, including my projects, skills, and professional experiences.
-
 ## Getting Started
 
 ### Development Server
